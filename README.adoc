@@ -1,0 +1,27 @@
+# Logging and tracing with Context - comparing Log4j and Zipkin
+
+## About
+
+This is an examples project for logging and tracing with Log4j and Zipkin.
+
+This is an add-on to a a talk I present.
+
+## Disclaimer
+
+This code is presented as examples for learning and not as ready-to-use production code.
+
+## License
+
+Copyright 2016 Alexander Schwartz
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+<http://www.apache.org/licenses/LICENSE-2.0>
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
