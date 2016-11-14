@@ -1,16 +1,18 @@
-# Logging and tracing with Context - comparing Log4j and Zipkin
+= Logging and tracing with Context - comparing Log4j and Zipkin
 
-## About
+== About
 
 This is an examples project for logging and tracing with Log4j and Zipkin.
 
-This is an add-on to a a talk I present.
+This is an add-on to a talk I presented.
 
-## Disclaimer
+Here are the (German) slides: https://speakerdeck.com/ahus1/logging-und-tracing-mit-kontextinformationen
+
+== Disclaimer
 
 This code is presented as examples for learning and not as ready-to-use production code.
 
-## License
+== License
 
 Copyright 2016 Alexander Schwartz
 
