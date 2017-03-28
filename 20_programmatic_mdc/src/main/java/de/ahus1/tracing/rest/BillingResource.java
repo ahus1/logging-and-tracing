@@ -1,10 +1,11 @@
 package de.ahus1.tracing.rest;
 
 import de.ahus1.tracing.domain.Invoice;
-import de.ahus1.tracing.domain.InvoiceRespository;
+import de.ahus1.tracing.domain.InvoiceRepository;
+import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.CloseableThreadContext;
 import org.slf4j.MDC;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,19 +15,19 @@ import javax.ws.rs.Produces;
  * @author Alexander Schwartz 2016
  */
 @Path("/")
+@Component
+@RequiredArgsConstructor
 public class BillingResource {
 
     private static final String INVOICE_ID = "invoiceId";
-
-    @Autowired
-    private InvoiceRespository respository;
+    private final InvoiceRepository repository;
 
     @GET
     @Path("startBillingRun")
     @Produces("text/plain")
     public String startBillingRun() {
         try {
-            for (Invoice i : respository.findAll()) {
+            for (Invoice i : repository.findAll()) {
                 MDC.put(INVOICE_ID, Long.toString(i.getId()));
                 try {
                     i.calculateTotal();

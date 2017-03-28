@@ -9,7 +9,7 @@ import java.util.List;
  * @author Alexander Schwartz 2016
  */
 @Component
-public class InvoiceRespository {
+public class InvoiceRepository {
     public List<Invoice> findAll() {
         List<Invoice> result = new ArrayList<>();
         result.add(new Invoice(1));

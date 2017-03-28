@@ -1,11 +1,13 @@
 package de.ahus1.tracing.rest;
 
 import de.ahus1.tracing.domain.Invoice;
-import de.ahus1.tracing.domain.InvoiceRespository;
+import de.ahus1.tracing.domain.InvoiceRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jboss.logging.MDC;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.cloud.sleuth.Span;
+import org.springframework.cloud.sleuth.Tracer;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import javax.ws.rs.GET;
@@ -17,15 +19,14 @@ import javax.ws.rs.Produces;
  */
 @Path("/")
 @Slf4j
+@RequiredArgsConstructor
+@Component
 public class BillingResource {
 
     private static final String INVOICE_ID = "invoiceId";
-
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @Autowired
-    private InvoiceRespository respository;
+    private final RestTemplate restTemplate;
+    private final InvoiceRepository repository;
+    private final Tracer tracer;
 
     @GET
     @Path("startBillingRun")
@@ -33,7 +34,7 @@ public class BillingResource {
     public String startBillingRun() {
         String callback = restTemplate.getForEntity("http://localhost:8080/api/callback", String.class).getBody();
         try {
-            for (Invoice i : respository.findAll()) {
+            for (Invoice i : repository.findAll()) {
                 MDC.put(INVOICE_ID, i.getId());
                 try {
                     i.calculateTotal();
@@ -43,7 +44,9 @@ public class BillingResource {
             }
             return "OK";
         } catch (Exception e) {
-            return "Error occured, please look at log";
+            return "Error occured, please look at log ("
+                    + Span.idToHex(tracer.getCurrentSpan().getTraceId())
+                    + ")";
         }
     }
 

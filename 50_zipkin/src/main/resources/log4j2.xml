@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="INFO">
+
+    <DynamicThresholdFilter key="X-B3-Export" onMatch="ACCEPT" defaultThreshold="warn" onMismatch="NEUTRAL">
+        <KeyValuePair key="true" value="trace"/>
+    </DynamicThresholdFilter>
+
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %X %-5level %logger{36} - %msg%n"/>
