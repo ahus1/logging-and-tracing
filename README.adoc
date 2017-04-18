@@ -8,6 +8,8 @@ This is an add-on to a talk I presented.
 
 Here are the (German) slides: https://speakerdeck.com/ahus1/logging-und-tracing-mit-kontextinformationen
 
+Here is a (German) article published on Heise Developer: https://www.heise.de/developer/artikel/Logging-und-Tracing-mit-Kontextinformation-fuer-Java-Entwickler-3686586.html[Logging und Tracing mit Kontextinformation für Java-Entwickler]
+
 == Disclaimer
 
 This code is presented as examples for learning and not as ready-to-use production code.
