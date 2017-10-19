@@ -6,9 +6,17 @@ This is an examples project for logging and tracing with Log4j and Zipkin.
 
 This is an add-on to a talk I presented.
 
-Here are the (German) slides: https://speakerdeck.com/ahus1/logging-und-tracing-mit-kontextinformationen
+English slides::
+https://speakerdeck.com/ahus1/logging-and-tracing-with-context-information-log4j-zipkin-and-spring-sleuth
 
-Here is a (German) article published on Heise Developer: https://www.heise.de/developer/artikel/Logging-und-Tracing-mit-Kontextinformation-fuer-Java-Entwickler-3686586.html[Logging und Tracing mit Kontextinformation für Java-Entwickler]
+German slides::
+https://speakerdeck.com/ahus1/logging-und-tracing-mit-kontextinformationen
+
+English acticle published in Dutch Java User Group Java Magazine::
+http://www.ahus1.de/uploads/images/16_19LoggingandTracingwithContextInformation.pdf[Logging and Tracing with Context Information]
+
+German acticle published on Heise Developer::
+https://www.heise.de/developer/artikel/Logging-und-Tracing-mit-Kontextinformation-fuer-Java-Entwickler-3686586.html[Logging und Tracing mit Kontextinformation für Java-Entwickler]
 
 == Disclaimer
 
@@ -16,7 +24,7 @@ This code is presented as examples for learning and not as ready-to-use producti
 
 == License
 
-Copyright 2016 Alexander Schwartz
+Copyright 2016-2017 Alexander Schwartz
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
