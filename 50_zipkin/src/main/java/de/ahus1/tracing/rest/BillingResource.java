@@ -34,7 +34,7 @@ public class BillingResource {
     @Path("startBillingRun")
     @Produces("text/plain")
     public String startBillingRun() {
-        String callback = restTemplate.getForEntity("http://localhost:8080/api/callback", String.class).getBody();
+        String callback = restTemplate.getForEntity("http://localhost:8081/api/callback", String.class).getBody();
         Span span = tracer.getCurrentSpan();
         try {
             for (Invoice i : repository.findAll()) {
