@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="30_interceptors" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="true">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <pattern>
+        <option name="PATTERN" value="de.ahus1.tracing.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="de.ahus1.tracing.Application" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="30_interceptors" />
+    <envs />
+    <method />
+  </configuration>
+</component>
