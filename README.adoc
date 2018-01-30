@@ -22,6 +22,32 @@ https://www.heise.de/developer/artikel/Logging-und-Tracing-mit-Kontextinformatio
 
 This code is presented as examples for learning and not as ready-to-use production code.
 
+== Running the examples
+
+During my talks I usually run the examples from my IntelliJ IDE.
+Matching run configurations are part of this repository.
+This makes it easy to explore and debug them.
+
+Once the examples run you can point your browser to the following URL: http://localhost:8080/
+
+To run the Zipkin example you'll need to have a Zipkin server up-and-running (for testing an instance started with Docker will do).
+
+You can run the examples from the command line like this:
+
+----
+mvn -am -pl 10_simple spring-boot:run
+mvn -am -pl 20_programmatic_mdc spring-boot:run
+mvn -am -pl 30_interceptors spring-boot:run
+mvn -am -pl 40_sleuth spring-boot:run
+----
+
+The last example runs two services on different ports in two different processes.
+Therefore two commands are necessary to be run in different terminals:
+----
+mvn -am -pl 50_zipkin spring-boot:run
+mvn -am -pl 50_zipkin spring-boot:run@run-external
+----
+
 == License
 
 Copyright 2016-2017 Alexander Schwartz
