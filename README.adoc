@@ -13,7 +13,7 @@ German slides::
 https://speakerdeck.com/ahus1/logging-und-tracing-mit-kontextinformationen
 
 English acticle published in Dutch Java User Group Java Magazine::
-http://www.ahus1.de/uploads/images/16_19LoggingandTracingwithContextInformation.pdf[Logging and Tracing with Context Information]
+http://www.ahus1.de/pdf/16_19LoggingandTracingwithContextInformation.pdf[Logging and Tracing with Context Information]
 
 German acticle published on Heise Developer::
 https://www.heise.de/developer/artikel/Logging-und-Tracing-mit-Kontextinformation-fuer-Java-Entwickler-3686586.html[Logging und Tracing mit Kontextinformation für Java-Entwickler]
